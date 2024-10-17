@@ -1,0 +1,47 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+    <a href="{% url 'home:home' %}" class="navbar-brand">
+        <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kider</h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto">
+
+            {% if request.resolver_match.view_name == 'home:home' %}
+            <a  href="{% url 'home:home'%}" class="nav-item nav-link active">Home</a>
+            {% else %}
+            <a  href="{% url 'home:home'%}" class="nav-item nav-link ">Home</a>
+            {% endif %}
+
+            {% if request.resolver_match.view_name == 'home:about' %}
+            <a href="{% url 'home:about'%}" class="nav-item nav-link active">About Us</a>
+            {% else %}
+            <a href="{% url 'home:about'%}" class="nav-item nav-link ">About Us</a>
+            {% endif %}
+
+            {% if request.resolver_match.view_name == 'home:cls' %}
+            <a href="{% url 'home:cls'%}" class="nav-item nav-link active ">Classes</a>
+            {% else %}
+            <a href="{% url 'home:cls'%}" class="nav-item nav-link  ">Classes</a>
+            {% endif %}
+
+            {% if request.resolver_match.view_name == 'home:remarque' %}
+            <a href="{% url 'home:remarque'%}" class="nav-item nav-link active">Appointment</a>
+            {% else %}
+            <a href="{% url 'home:remarque'%}" class="nav-item nav-link ">Appointment</a>
+            {% endif %}
+
+            {% if request.resolver_match.view_name == 'home:contact' %}
+            <a href="{% url 'home:contact'%}" class="nav-item nav-link active">Contact Us</a>
+            {% else %}
+            <a href="{% url 'home:contact'%}" class="nav-item nav-link  ">Contact Us</a>
+            {% endif %}
+
+        </div>
+        <!-- il faut affficher le nom d'utilisateur
+         <a href="{% url 'home:login'%}" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+            -->
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+{% load static %}
+<html lang="en">
+<head>
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+    <meta charset="UTF-8">
+    <title> Kider </title>
+</head>
+<body>
+<p>test  adaz d</p>
+<ul>
+    {% for t in lc %}
+        <li>Parent : <span>{{ t.Parent_name }}</span><span> &emsp; |-->    Child : </span><span>{{ t.Child_name }}</span></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
