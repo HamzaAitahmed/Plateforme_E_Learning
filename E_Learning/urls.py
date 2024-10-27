@@ -1,8 +1,8 @@
 """
-URL configuration for e_learning project.
+URL configuration for E_Learning project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/5.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -17,10 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
-
-    path('', include('home.urls', namespace='login')),
-    path('home/', include('home.urls', namespace='home')),
+    path('', include('E_Learning_App.urls', namespace='E_Learning_App')),
     path('admin/', admin.site.urls),
 ]
