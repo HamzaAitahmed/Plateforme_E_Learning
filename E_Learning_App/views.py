@@ -87,6 +87,7 @@ def join_int(request):
     video = Video.objects.filter(Video_Category="Interactive")
     category = "Interactive"
     client = Client.objects.filter(Q(email=user)).first()
+    print(client)
     for x in cour:
         if x.client == client:
             return render(request, "videos.html", {'client': client, 'video': video, 'category': category})

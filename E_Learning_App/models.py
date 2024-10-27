@@ -9,6 +9,7 @@ class Client(models.Model):
     Parent_name = models.CharField(max_length=30, null=True)
     password = models.CharField(max_length=30, null=True)
     email = models.CharField(max_length=30, null=True)
+    photo = models.CharField(max_length=50, null=True, default="img/user/inconnu.jpg")
     Child_name = models.CharField(max_length=30, null=True)
     Child_age = models.IntegerField(default=0)
     message = models.CharField(max_length=250, null=True)
@@ -45,4 +46,4 @@ class Video(models.Model):
     objects = None
 
     def __str__(self):
-        return self.Video_Category
+        return self.title
